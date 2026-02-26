@@ -1,8 +1,8 @@
-Financial Document Analyzer API
+# Financial Document Analyzer API
 
 A FastAPI-based service to extract structured insights from financial documents (PDFs) using AI agents via CrewAI and Groq LLM (LLaMA3).
 
-Table of Contents
+## Table of Contents
 
 Project Overview
 
@@ -16,11 +16,11 @@ API Documentation
 
 Example Output
 
-Project Overview
+## Project Overview
 
 This API allows users to upload financial PDFs and query them for key metrics, performance summaries, and risk assessment. The API ensures that outputs are returned in strict JSON format for consistency.
 
-Tech Stack
+## Tech Stack
 
 Backend Framework: FastAPI
 
@@ -32,7 +32,7 @@ Document Loader: LangChain Community PyPDFLoader
 
 Environment & Dependencies: Python, Pydantic v2, Uvicorn
 
-Key features:
+## Key features:
 
 Extract company name, reporting period, and financial metrics (revenue, net income, EPS, etc.)
 
@@ -44,7 +44,7 @@ Handles multiple-page PDFs (truncated to prevent token overflow)
 
 Uses CrewAI Agent + Task framework for structured LLM execution
 
-Issues Found and Fixes
+## Issues Found and Fixes
 Deterministic Bugs
 
 1️⃣ Undefined / Improper LLM Initialization
@@ -117,7 +117,7 @@ Fix: Enforced a structured JSON schema for consistent and reliable outputs.
 Problem: Prompts did not enforce page or character limits, risking token overflow.
 Fix: Added maximum pages and character limits to prevent truncation or crashes.
 
-Setup Instructions
+## Setup Instructions
 
 1️⃣ Clone the repository
 
@@ -139,7 +139,8 @@ pip install -r requirements.txt
 Create a .env file:
 
 GROQ_API_KEY=<your_groq_api_key>
-Usage Instructions
+
+## Usage Instructions
 
 1️⃣ Run the API
 
@@ -187,7 +188,7 @@ query	str	User query to extract specific data
 
 Response: 200 OK
 
-Example JSON output:
+## Example JSON output:
 
 {
   "result": {
