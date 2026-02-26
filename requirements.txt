@@ -1,0 +1,8 @@
+crewai==0.130.0
+fastapi
+uvicorn
+python-dotenv
+langchain-community
+pypdf
+groq
+python-multipart
